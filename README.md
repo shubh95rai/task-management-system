@@ -10,7 +10,7 @@ A full-featured Task Management System built with the **MERN Stack (MongoDB, Exp
 - 🔁 **CRUD Operations** for Tasks and Users
 - 👥 **Assign Tasks** to other registered users
 - 📊 **Dashboard** with summary and statistics
-- 📈 **Interactive Charts** using [Recharts]
+- 📈 **Interactive Charts** using **Recharts**
 - 🔒 **Role-Based Access Control (RBAC)**
   - Admin: Full access
   - User: View assigned tasks
