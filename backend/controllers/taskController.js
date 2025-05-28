@@ -1,4 +1,4 @@
-import Task from "../models/task.js";
+import Task from "../models/Task.js";
 
 // get dashbaord data
 // GET /api/tasks/dashboard-data

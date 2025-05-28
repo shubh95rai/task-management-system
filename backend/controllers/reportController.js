@@ -1,5 +1,5 @@
-import Task from "../models/task.js";
-import User from "../models/user.js";
+import Task from "../models/Task.js";
+import User from "../models/User.js";
 import excelJS from "exceljs";
 
 // export all tasks report as excel
