@@ -25,11 +25,9 @@ router.post("/upload-image", upload.single("image"), (req, res) => {
   //   req.file.filename
   // }`;
 
-  const baseUrl =
-    process.env.VITE_BASE_URL || `${req.protocol}://${req.get("host")}`;
-  const imageUrl = `${baseUrl}/uploads/${req.file.filename}`;
+  // res.status(200).json({ imageUrl });
 
-  res.status(200).json({ imageUrl });
+  res.status(200).json({ imageUrl: req.file.path }); // cloudinary gives the full url
 });
 
 export default router;
