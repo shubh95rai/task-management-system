@@ -1,7 +1,7 @@
 export default function TaskStatusTabs({ tabs, activeTab, setActiveTab }) {
   return (
     <div className="my-2">
-      <div className="flex">
+      <div className="flex flex-wrap justify-center sm:justify-start">
         {tabs.map((tab) => {
           if (tab.count === 0) {
             return null;
@@ -14,7 +14,7 @@ export default function TaskStatusTabs({ tabs, activeTab, setActiveTab }) {
                 tab.label === activeTab
                   ? " text-primary"
                   : "text-gray-500 hover:text-gray-700"
-              } relative px-3 md:px-4 py-2 text-sm font-medium cursor-pointer`}
+              } relative px-3 sm:px-4 py-2 text-xs md:text-sm  font-medium cursor-pointer`}
               onClick={() => setActiveTab(tab.label)}
             >
               <div className="flex items-center">

@@ -35,7 +35,7 @@ export default function SideMenu({ activeMenu }) {
   }, [user]);
 
   return (
-    <div className="w-64 h-[calc(100vh-61.6px)] bg-white border-r border-gray-200/50 sticky top-[61.6px] z-20">
+    <div className="w-64 h-[calc(100vh-60px)] bg-white border-r border-gray-200/50 sticky top-[60px] z-20">
       <div className="flex flex-col items-center justify-center mb-7 pt-5">
         <div className="relative size-20 rounded-full overflow-hidden bg-slate-400">
           <img
@@ -62,14 +62,14 @@ export default function SideMenu({ activeMenu }) {
         return (
           <button
             key={`menu_${index}`}
-            className={`w-full flex items-center gap-4 py-3 px-6 mb-3 cursor-pointer ${
+            className={`w-full flex items-center gap-4 py-3 px-6 mb-3 cursor-pointer text-sm sm:text-base ${
               activeMenu == item.label
                 ? "text-primary bg-linear-to-r from-blue-50/40 to-blue-100/50 border-r-3"
                 : ""
             }`}
             onClick={() => handleCLick(item.route)}
           >
-            <item.icon className="text-xl" />
+            <item.icon className="text-lg sm:text-xl" />
             {item.label}
           </button>
         );

@@ -46,7 +46,7 @@ export default function TaskListTable({ tableData }) {
               </td>
               <td className="p-4">
                 <span
-                  className={`px-2 py-1 text-xs inline-block rounded-lg ${getStatusBadgeColor(
+                  className={`px-2 py-1 text-xs inline-block rounded-lg truncate ${getStatusBadgeColor(
                     task.status
                   )}`}
                 >

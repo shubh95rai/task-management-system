@@ -6,7 +6,7 @@ export default function Navbar({ activeMenu }) {
   const [openSideMenu, setOpenSideMenu] = useState(false);
 
   return (
-    <div className="flex gap-5 bg-white border border-b border-gray-200/50 backdrop-blur-[2px] py-4 px-7 sticky top-0 z-30">
+    <div className="h-15 flex items-center gap-4 bg-white border border-b border-gray-200/50 backdrop-blur-[2px] px-5 sm:px-7 sticky top-0 z-30">
       <button
         className="lg:hidden text-black"
         onClick={() => {
@@ -14,16 +14,18 @@ export default function Navbar({ activeMenu }) {
         }}
       >
         {openSideMenu ? (
-          <HiOutlineX className="text-2xl" />
+          <HiOutlineX className="text-xl sm:text-2xl" />
         ) : (
-          <HiOutlineMenu className="text-2xl" />
+          <HiOutlineMenu className="text-xl sm:text-2xl" />
         )}
       </button>
 
-      <h2 className="text-lg font-medium text-black">Task Management System</h2>
+      <h2 className="sm:text-lg font-medium text-black">
+        Task Management System
+      </h2>
 
       {openSideMenu && (
-        <div className="fixed top-[61px] -ml-4 bg-white lg:hidden">
+        <div className="fixed top-[59px] left-0 bg-white lg:hidden">
           <SideMenu activeMenu={activeMenu} />
         </div>
       )}
