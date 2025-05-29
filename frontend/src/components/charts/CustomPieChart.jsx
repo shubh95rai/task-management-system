@@ -19,8 +19,8 @@ export default function CustomPieChart({ data, color }) {
           nameKey="status"
           cx="50%"
           cy="50%"
-          outerRadius={130}
-          innerRadius={100}
+          outerRadius={110}
+          innerRadius={80}
           labelLine={false}
         >
           {data.map((entry, index) => (
