@@ -85,7 +85,7 @@ export default function UserDashboard() {
   }
 
   function onSeeMore() {
-    navigate("/admin/tasks");
+    navigate("/user/my-tasks");
   }
 
   useEffect(() => {
