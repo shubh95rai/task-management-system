@@ -1,11 +1,19 @@
 import mongoose from "mongoose";
 
+let isConnected = false;
+
 async function connectToDB() {
+  if (isConnected) {
+    return;
+  }
   await mongoose
     .connect(process.env.MONGODB_URL)
-    .then(() => console.log("Successfully connected to MongoDB"))
-    .catch((err) => {
-      console.log("Error connecting to MongoDB:", err);
+    .then(() => {
+      isConnected = true;
+      console.log("✅ Successfully connected to MongoDB");
+    })
+    .catch((error) => {
+      console.log("❌ Error connecting to MongoDB:", error);
       process.exit(1);
     });
 }
